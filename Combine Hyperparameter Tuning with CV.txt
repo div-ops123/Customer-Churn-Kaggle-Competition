@@ -1,0 +1,58 @@
+https://stackabuse.com/optimizing-models-cross-validation-and-hyperparameter-tuning-guide/
+
+
+
+Best Practice: To avoid overfitting during tuning, a nested cross-validation approach is recommended, using an inner loop for tuning and an outer loop for evaluation. 
+
+In short, hyperparameter tuning uses cross-validation as a tool to find the best model configuration. 
+
+Retrain the Whole Dataset with the Best Parameters
+After obtaining the best model and best parameters from GridSearchCV results, we can use the same model and hyperparameter combination and train on the entire dataset by combining the validation and testing dataset as well.
+
+This works well when the size of the dataset is small and the best model-parameters combination has achieved better results across all CV splits.
+
+
+However, before choosing any single technique, it is crucial to consider the use case under consideration, the size of the dataset, and the amount of computational resources available.
+
+Then, we will be able to choose the appropriate algorithm and CV technique for training and inference of production-ready models.
+
+
+Step 1: Use CV / nested CV → estimate performance
+Step 2: Choose best hyperparameters
+Step 3: Retrain model on full dataset
+Step 4: Deploy model
+
+
+
+====
+
+https://techcommunity.microsoft.com/blog/fasttrackforazureblog/identifying-drift-in-ml-models-best-practices-for-generating-consistent-reliable/4040531
+
+google search: monitoring and managing model drift in production
+
+
+=======
+
+competition
+
+COMPETITION TITLE
+Playground Series - Season 6, Episode 3
+
+1. TEAM LIMITS
+a. The maximum Team size is three (3). b. Team mergers are allowed and can be performed by the Team leader. In order to merge, the combined Team must have a total Submission count less than or equal to the maximum allowed as of the Team Merger Deadline. The maximum allowed is the number of Submissions per day multiplied by the number of days the competition has been running.
+
+
+2. SUBMISSION LIMITS
+a. You may submit a maximum of five (5) Submissions per day. b. You may select up to two (2) Final Submissions for judging.
+
+
+Submissions are evaluated on area under the ROC curve between the predicted probability and the observed target.
+
+Submission File
+For each id in the test set, you must predict a probability for the Churn variable. The file should contain a header and have the following format:
+
+id,Churn
+594194,0.1
+594195,0.3
+594196,0.2
+etc.
